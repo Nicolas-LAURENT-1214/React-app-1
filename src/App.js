@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import React from 'react';
+//import Display from './tools/Display.js';
+import Header from './component/Header.js';
+import Footer from './component/Footer.js';
+
 import './App.css';
+import List from './component/List';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+
+export default class App extends React.Component {
+  state = {
+    id:null,
+    title:"",
+    isChecked:false,
+  };
+
+  /*
+  handleCheck = (e) => {
+    this.setState({
+      isChecked: e.target.checked
+    })
+  }
+
+  handleTitle = (e) => {
+    this.setState({
+      title: e.target.value
+    })
+  }*/
+
+  
+
+  render() {
+    return (
+      <div className="App container">
+        <Header/>
+
+        <List/>
+
+        <Footer/>
+      </div>
+    );
+  }
 }
-
-export default App;
+         
